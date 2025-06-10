@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Start Building...
-    runs-on: windows-2025
+    runs-on: windows-2022
     timeout-minutes: 300
     
     steps:
