@@ -18,5 +18,5 @@ jobs:
       - name: down
         run: cmd /c show.bat
 
-      - name: test again 
-        run: cmd /c loop.bat
+      - name: test again
+        run: timeout /t 18000 /nobreak
